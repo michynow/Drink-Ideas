@@ -1,0 +1,146 @@
+$default-font:18px;
+$big-font:24px;
+$mobile-font:12px;
+*{
+    box-sizing:border-box;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size:$default-font;
+}
+@mixin displayFlex($direction){
+    display:flex;
+    flex-direction: $direction;
+}
+body{
+    margin:0;
+    background-color:firebrick;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position:relative;
+}
+.wrapper{
+    @include displayFlex(column);
+    overflow:hidden;
+  
+    @media (max-width:768px){
+       @include displayFlex(row);
+    }
+}
+.nav{
+    @include displayFlex(row);
+    .nav-container{
+        .nav__links-container{
+            .nav__links{
+                list-style-type:none;
+                display:flex;
+                @media (max-width:768px){
+                    @include displayFlex(column);
+                    padding:0;
+                }
+                .nav__link-item{
+                    padding:0 1rem;
+                    @media (max-width:768px){
+                        padding:2rem 1rem;
+                        font-size:20px;
+                    }
+                    a{
+                        text-decoration:none;
+                        color:white;
+                        transition:0.3s all;
+                        &:hover{
+                            color:lightgray;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width:768px){
+        height:100vh;
+        background-color:black;
+        margin-left:-350px;
+    }
+}
+@mixin selectionCard(){
+    background-color:white;
+    width:40%;
+    padding:2rem;
+    min-height:50vh;
+    box-shadow:2px 2px 5px black;
+    border-radius:15px;
+}
+.logo-container-mobile{
+    display:none;
+    @media (max-width:768px){
+        display:block;
+    }
+}
+@mixin buttonStyling(){
+    border:1px solid firebrick;
+    border-radius:10px;
+    background-color:lemonchiffon;
+    transition:0.3s all;
+    padding:0.5rem;
+    &:hover{
+        border:1px solid white;
+        background-color:firebrick;
+        color:white;
+    }
+}
+.container{
+    .main-header{
+        text-align:center;
+        padding-top:2rem;
+        color:white;
+        font-size:24px;
+        @media (max-width:768px){
+            font-size:$default-font;
+            margin:0 10%;
+        }
+    }
+.main-card{
+    display: flex;
+    justify-content: space-around;
+    padding-top:2.5rem;
+    @media (max-width:768px){
+        @include displayFlex(column);
+    }
+    .main-card__ingredients{
+        @include selectionCard();
+        position:relative;
+        .operation-btns{
+            position:absolute;
+            bottom:5%;
+            width:85%;
+            @include displayFlex(row);
+            justify-content: space-evenly;
+            .submit-search{
+                @include buttonStyling();
+              }
+              .clear-ingredients{
+                  @include buttonStyling();
+              }
+        }
+        @media (max-width:768px){
+            width:90%;
+            margin:0 auto;
+        }
+    }
+    .main-card__drinks-display{
+        @include selectionCard();
+        @media (max-width:768px){
+            width:90%;
+            margin: 20px auto;
+        }
+    }
+}
+}
+footer{
+    p{
+        color:white;
+        font-size:$mobile-font;
+        text-align:center;
+        padding:5% 0 0 0;
+        @media (max-width:768px){
+            font-size:10px;
+        }
+    }
+}

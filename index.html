@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>DrinkIdeas for your evening</title>
+</head>
+<body>
+    <div class="wrapper">
+    <header>
+        <nav class="nav">
+            <div class="logo-container">
+                <img src="" alt="">
+            </div>
+            <div class="nav-container">
+                <div class="nav__links-container">
+                    <ul class="nav__links">
+                        <li class="nav__link-item"><a href="">Drinks from your ingredients</a></li>
+                        <li class="nav__link-item"><a href="">Random drink idea</a></li>
+                        <!-- <li class="nav__link-item"><a href="">About</a></li> -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="logo-container-mobile">
+        <img src="" alt="">
+    </div>
+    <div class="main-footer-container">
+        <main class="container">
+            <h1 class="main-header">Find which drinks you can make from what you have at home!</h1>
+            <div class="main-card">
+                <div class="main-card__ingredients">
+                    <div class="main-card__ingredients-select">
+                        <label for="Ingredients selection">Select ingredients available</label><br>
+                        <select name="Ingredients" id="ingredients">
+                        </select>
+                    </div>
+                    <div class="main-card__ingredients--selected">
+                        <p>No ingredients selected!</p>
+                        <ul class="main-card__ingredients-list"></ul>
+                    </div>
+                    <div class="operation-btns">
+                        <button class="submit-search">Find your drinks!</button>
+                        <button class="clear-ingredients">Clear ingredients</button>
+                    </div>
+                    
+                </div>
+                <div class="main-card__drinks-display">
+                    Results:
+                    <div class="drinks-display--results">
+                        
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>
+                DrinkIdea is a small open-source project realised by Michal Nowakowski as a part of his training
+                to become a proficent web-developer.
+            </p>
+        </footer>
+    </div>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
