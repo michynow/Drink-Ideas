@@ -33,8 +33,9 @@
             <div class="main-card">
                 <div class="main-card__ingredients">
                     <div class="main-card__ingredients-select">
-                        <label for="Ingredients selection">Select ingredients available</label><br>
+                        <label for="Ingredients selection">Select ingredients available at your place:</label><br>
                         <select name="Ingredients" id="ingredients">
+                            <option selected="selected" disabled="disabled">Select ingredients</option>
                         </select>
                     </div>
                     <div class="main-card__ingredients--selected">
@@ -45,12 +46,10 @@
                         <button class="submit-search">Find your drinks!</button>
                         <button class="clear-ingredients">Clear ingredients</button>
                     </div>
-                    
                 </div>
                 <div class="main-card__drinks-display">
-                    Results:
+                    <p>Results:</p>
                     <div class="drinks-display--results">
-                        
                     </div>
                 </div>
             </div>
